@@ -9,7 +9,7 @@ Requirements:
 
 
 
-Schemas
+Schemas:
     User:
         id
         name
@@ -20,13 +20,29 @@ Schemas
         id
         name
         latest_version
-        file_path(data saved in a .md file)
+        owner -> user.id
+        file_path(data saved in markdown)
 
 
     UserDocument:
         user.id
         document.id
-        premission (R,W,R/W)
+        premission (R/W)
 
 
-
+Steps
+1. Create user and implement jwt authentication
+2. Full web app with user profile page(change password, username, email, login, register)
+3. Front end makrdown editor
+4. Save the document text in file and create document entity in db.
+5. Till now one user can create save and edit documents, only owner can delete document(sharing is not implemented yet)
+6. Add invite user option, multiple users can change a single document, notification will be given in app, sharing using email
+7. When a user clicks on save the new doument data is saved in the db(not continous sharing yet)
+8. Add option to save different versions of the document, (1.0,1.1..1.9, 2.1..2.9, 3.0) - increase version in continous order
+    - not automatically save, a button to define a new version, base version(1.0)
+    - option to switch versions, dropdown
+    - different markdown file for each version
+9. Implement websockets for continous sharing
+10. Proper way to store data with continous sharing
+11. Image upload option, save image in a cloud bucket and use makrdown url embed
+12. Other options( Url embed, video, public link sharing)

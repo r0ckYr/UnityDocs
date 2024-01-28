@@ -30,6 +30,17 @@ Schemas:
         premission (R/W)
 
 
+    Notification:
+        id
+        title
+        content
+
+
+    UserNotification:
+        user.id
+        notification.id
+
+
 Steps
 1. Create user and implement jwt authentication
 2. Full web app with user profile page(change password, username, email, login, register)

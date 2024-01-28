@@ -1,0 +1,32 @@
+Requirements:
+    User
+    Document
+    Sharing
+    Version Control
+    continous changing?
+    convert to pdf?
+    host online?
+
+
+
+Schemas
+    User:
+        id
+        name
+        email
+
+
+    Document:
+        id
+        name
+        latest_version
+        file_path(data saved in a .md file)
+
+
+    UserDocument:
+        user.id
+        document.id
+        premission (R,W,R/W)
+
+
+

@@ -42,7 +42,7 @@ Schemas:
 
 
 Steps
-1. Create user and implement jwt authentication
+1. Create user and implement jwt authentication --> Done
 2. Full web app with user profile page(change password, username, email, login, register)
 3. Front end makrdown editor
 4. Save the document text in file and create document entity in db.

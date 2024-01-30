@@ -1,0 +1,5 @@
+- JWT login backend complete
+    need to fix user registration, check if email exist
+
+- Build the backend api first
+

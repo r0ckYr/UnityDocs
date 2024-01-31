@@ -1,5 +1,5 @@
 - JWT login backend complete
-    need to fix user registration, check if email exist
+    need to fix user registration, check if email exist --> done
 
-- Build the backend api first
+- Build the backend api first --> todo - start buliding the document api endpoints
 

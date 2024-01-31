@@ -19,6 +19,12 @@ public class AuthenticationService {
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
     public AuthenticationResponse register(RegisterRequest request) {
+        if(repository.findByEmail(request.getEmail()).isPresent())
+        {
+            return AuthenticationResponse.builder()
+                    .error("User already exists!")
+                    .build();
+        }
         var user = User.builder()
                 .name(request.getName())
                 .email(request.getEmail())

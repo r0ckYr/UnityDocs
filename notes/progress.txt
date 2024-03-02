@@ -3,3 +3,5 @@
 
 - Build the backend api first --> todo - start buliding the document api endpoints
 
+- Completed user endpoints
+    todo -> revoke jwt after logout and password change

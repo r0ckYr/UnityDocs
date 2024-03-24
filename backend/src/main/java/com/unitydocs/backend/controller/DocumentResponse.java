@@ -1,4 +1,4 @@
-package com.unitydocs.backend.auth;
+package com.unitydocs.backend.controller;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,9 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuthenticationResponse {
-    private String token;
-    private String error;
+public class DocumentResponse {
+    int id;
+    String name;
+    String file_path;
+    String error;
 }

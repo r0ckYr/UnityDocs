@@ -43,9 +43,9 @@ Schemas:
 
 Steps
 1. Create user and implement jwt authentication --> Done
-2. Full web app with user profile page(change password, username, email, login, register)
-3. Front end makrdown editor
-4. Save the document text in file and create document entity in db.
+2. Full web app with user profile page(change password, username, email, login, register) --> Done
+3. Front end makrdown editor --> Done
+4. Save the document text in file and create document entity in db. --> Done
 5. Till now one user can create save and edit documents, only owner can delete document(sharing is not implemented yet)
 6. Add invite user option, multiple users can change a single document, notification will be given in app, sharing using email
 7. When a user clicks on save the new doument data is saved in the db(not continous sharing yet)

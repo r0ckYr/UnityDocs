@@ -6,7 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.DialectOverride;
 
 @Data
 @Builder
@@ -14,7 +13,6 @@ import org.hibernate.annotations.DialectOverride;
 @AllArgsConstructor
 @Entity
 public class Document {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

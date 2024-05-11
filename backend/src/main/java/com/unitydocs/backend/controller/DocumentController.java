@@ -96,6 +96,7 @@ public class DocumentController {
         return response;
     }
 
+    // return content of doucment file in this
     @GetMapping("/{documentId}")
     public ResponseEntity<DocumentResponse> getDocumentById(Authentication authentication, @PathVariable int documentId) {
         String username = authentication.getName();
@@ -117,6 +118,7 @@ public class DocumentController {
         }).orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
+    //todo not completed
     @PutMapping("/{documentId}")
     public ResponseEntity<Document> updateDocument(@PathVariable int documentId, @RequestBody Document updatedDocument) {
         Optional<Document> optionalDocument = documentRepository.findById(documentId);

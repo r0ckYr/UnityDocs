@@ -1,76 +1,47 @@
-## Requirements:
-- User
-- Document
-- Sharing
-- Version Control
-- Continuous Changing?
-- Convert to PDF?
-- Host Online?
+# Project Overview
 
-## Basic Schemas:
+This project aims to develop a comprehensive web application for document management and collaboration. It includes features such as user management, document creation and editing, sharing functionality, version control, and conversion to PDF. The application will also provide hosting options for online access.
 
-### User:
-- id
-- name
-- email
+## Project Requirements
+- **User Management:** The system should support user registration, login, and profile management. Users should be able to update their passwords, usernames, and email addresses.
+- **Document Management:** Users can create, edit, and delete documents. Documents can be saved in markdown format and stored in the database.
+- **Sharing Functionality:** Users can share documents with other users, allowing for collaborative editing. Sharing options include in-app notifications and sharing via email.
+- **Version Control:** The system supports versioning for documents, allowing users to track changes and revert to previous versions. Versions are incrementally numbered and can be switched using a dropdown menu.
+- **Conversion to PDF:** Users have the option to convert documents to PDF format for easier sharing and printing.
+- **Hosting Online:** The application will be hosted online to provide access to users from anywhere with an internet connection.
 
-### Document:
-- id
-- name
-- latest_version
-- owner -> user.id
-- file_path (data saved in markdown)
+## Implementation Steps
 
-### UserDocument:
-- user.id
-- document.id
-- permission (R/W)
+1. **User Management and JWT Authentication:**
+   - Implement user authentication using JWT tokens for secure access to the application.
+   - Allow users to register, login, and manage their profiles.
+2. **Front-End Markdown Editor:**
+   - Develop a user-friendly markdown editor for creating and editing documents.
+3. **Saving Document Text in a File and Creating Document Entities in the Database:**
+   - Implement functionality to save document text in files and store document entities in the database.
+4. **Document Creation, Editing, and Deletion:**
+   - Enable users to create, edit, and delete documents.
+5. **Adding User Invite Option:**
+   - Implement a feature to invite other users to collaborate on documents.
+   - Provide in-app notifications for document invitations and sharing updates.
+6. **Database Saving on Document Save:**
+   - Configure the system to save document changes in the database upon save actions.
+7. **Version Control:**
+   - Implement version control functionality for documents, allowing users to track changes and revert to previous versions.
+8. **Implementation of Websockets for Continuous Sharing:**
+   - Integrate Websockets to enable real-time collaboration and sharing updates.
+9. **Data Storage Strategy for Continuous Sharing:**
+   - Develop a robust data storage strategy to support continuous document sharing and collaboration.
+10. **Image Upload Functionality:**
+    - Allow users to upload images and embed them in documents.
+    - Store images in a cloud bucket for efficient access and management.
+11. **Additional Features:**
+    - Implement URL embedding, video embedding, and public link sharing for enriched document content and sharing options.
 
-### Notification:
-- id
-- title
-- content
+## API Documentation
 
-### UserNotification:
-- user.id
-- notification.id
+API documentation can be found [here](notes/API_ROUTES.md).
 
-## Steps:
+## Database Schema
 
-1. **Create user and implement JWT authentication**
-2. **Full web app with user profile page**
-   - Change password, username, email, login, register
-3. **Front-end markdown editor**
-4. **Save the document text in a file and create document entity in the database**
-5. **One user can create, save, and edit documents; only owner can delete document (sharing is not implemented yet)**
-6. **Add invite user option**
-   - Multiple users can change a single document
-   - Notification will be given in the app
-   - Sharing using email
-7. **When a user clicks on save, the new document data is saved in the database (not continuous sharing yet)**
-8. **Add option to save different versions of the document**
-   - (1.0, 1.1, ..., 1.9, 2.1, ..., 2.9, 3.0)
-   - Increase version in continuous order
-   - Not automatically save; a button to define a new version
-   - Base version (1.0)
-   - Option to switch versions using dropdown
-   - Different markdown file for each version
-9. **Implement websockets for continuous sharing**
-10. **Proper way to store data with continuous sharing**
-11. **Image upload option**
-   - Save image in a cloud bucket
-   - Use markdown URL embed
-12. **Other options**
-   - URL embed
-   - Video
-   - Public link sharing
-
-
-
-
-## API
-   Documentation can be found [here](notes/API_ROUTES.md)
-
-
-## SCHEMA
-   Database [schema](notes/SCHEMA.md)
+Database schema details are available [here](notes/SCHEMA.md).

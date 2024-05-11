@@ -64,3 +64,11 @@
    - URL embed
    - Video
    - Public link sharing
+
+
+## API
+    Documentation can be found [here](notes/API_ROUTES.md)
+
+
+## SCHEMA
+   Database [schema](notes/SCHEMA.md)
